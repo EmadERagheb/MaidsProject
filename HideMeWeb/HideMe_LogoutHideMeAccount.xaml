@@ -21,7 +21,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>704.8,4149.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>704.8,4172.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>HideMe_OpenBrowserToSignUp_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -118,7 +118,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Desc: ClickRegister&#xA;&#xA;PreCondition:Sign Page Exsists  / Found Success ! &#xA;&#xA;Action: After  Sign Up Page Opend Type Register Mail and  Click Register&#xA;&#xA;PostCondition: Sign In Page Found&#xA;&#xA;inArg:in_strHideMeUserName" DisplayName="HideMe_ClickRegister" sap:VirtualizedContainerService.HintSize="715.2,4084.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Desc: Logout The Website&#xA;&#xA;PreCondition:Dashboard Found&#xA;&#xA;Action: Click log out&#xA;&#xA;PostCondition: Sign In Page Found&#xA;&#xA;inArg:in_strHideMeUserName" DisplayName="HideMe_Logout" sap:VirtualizedContainerService.HintSize="715.2,4108" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -126,7 +126,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Start Register" sap:VirtualizedContainerService.HintSize="652.8,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;start loginout Account&quot;]" />
-    <TryCatch DisplayName="Try Catch System Exeption" sap:VirtualizedContainerService.HintSize="652.8,3492" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch System Exeption" sap:VirtualizedContainerService.HintSize="652.8,3515.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,10 +134,10 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry 3 Case Of Failure" sap:VirtualizedContainerService.HintSize="616,3220.8" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intNumberOfRetries]" RetryInterval="[in_tsRetryInterval]">
+        <ui:RetryScope DisplayName="Retry 3 Case Of Failure" sap:VirtualizedContainerService.HintSize="616,3244" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intNumberOfRetries]" RetryInterval="[in_tsRetryInterval]">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence sap:VirtualizedContainerService.HintSize="574.4,3044.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence sap:VirtualizedContainerService.HintSize="574.4,3068" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -186,7 +186,7 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Open Hide.me" sap:VirtualizedContainerService.HintSize="512,854.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,854.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -267,7 +267,7 @@
                     </ui:BrowserScope.Body>
                   </ui:BrowserScope>
                 </Sequence>
-                <Sequence DisplayName="Post Action" sap:VirtualizedContainerService.HintSize="512,1032" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Post Action" sap:VirtualizedContainerService.HintSize="512,1055.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolMailSend" />
                     <Variable x:TypeArguments="x:Boolean" Name="boolSignIn" />
@@ -287,7 +287,7 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <If Condition="[boolMailSend]" DisplayName="If Sign In Page Found" sap:VirtualizedContainerService.HintSize="449.6,772.8" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[boolMailSend]" DisplayName="If Sign In Page Found" sap:VirtualizedContainerService.HintSize="449.6,796" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
                       <Sequence DisplayName="Founded" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <sap:WorkflowViewStateService.ViewState>
@@ -299,14 +299,14 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Not founded" sap:VirtualizedContainerService.HintSize="416,359.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Not founded" sap:VirtualizedContainerService.HintSize="416,382.4" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:LogMessage DisplayName="Not Found" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;sign in  page not found &quot;]" />
-                        <Throw DisplayName="Throw SE" Exception="[new SystemException (&quot;couldn''t found sign in   page &quot;)]" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                        <Throw DisplayName="Throw SE" Exception="[new SystemException (&quot;couldn''t found sign in   page &quot;)]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </If.Else>
                   </If>
@@ -345,6 +345,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="End Hide.me Register" sap:VirtualizedContainerService.HintSize="652.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;end register hide.me&quot;]" />
+    <ui:LogMessage DisplayName="End Logout" sap:VirtualizedContainerService.HintSize="652.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;end logout hide.me&quot;]" />
   </Sequence>
 </Activity>

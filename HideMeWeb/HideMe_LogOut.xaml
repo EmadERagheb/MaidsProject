@@ -2,10 +2,8 @@
   <x:Members>
     <x:Property Name="in_intNumberOfRetries" Type="InArgument(x:Int32)" />
     <x:Property Name="in_tsRetryInterval" Type="InArgument(x:TimeSpan)" />
-    <x:Property Name="in_HideMeURL" Type="InArgument(x:String)" />
-    <x:Property Name="in_intTimeS" Type="InArgument(x:Int32)" />
-    <x:Property Name="in_strMail" Type="InArgument(x:String)" />
-    <x:Property Name="int_TimeoutM" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_intTimeoutM" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_strHidemeUserName" Type="InArgument(x:String)" />
   </x:Members>
   <this:HideMe_OpenBrowserToSignUp.in_intNumberOfRetries>
     <InArgument x:TypeArguments="x:Int32" />
@@ -13,22 +11,13 @@
   <this:HideMe_OpenBrowserToSignUp.in_tsRetryInterval>
     <InArgument x:TypeArguments="x:TimeSpan" />
   </this:HideMe_OpenBrowserToSignUp.in_tsRetryInterval>
-  <this:HideMe_OpenBrowserToSignUp.in_HideMeURL>
-    <InArgument x:TypeArguments="x:String" />
-  </this:HideMe_OpenBrowserToSignUp.in_HideMeURL>
-  <this:HideMe_OpenBrowserToSignUp.in_intTimeS>
+  <this:HideMe_OpenBrowserToSignUp.in_intTimeoutM>
     <InArgument x:TypeArguments="x:Int32" />
-  </this:HideMe_OpenBrowserToSignUp.in_intTimeS>
-  <this:HideMe_OpenBrowserToSignUp.in_strMail>
-    <InArgument x:TypeArguments="x:String" />
-  </this:HideMe_OpenBrowserToSignUp.in_strMail>
-  <this:HideMe_OpenBrowserToSignUp.int_TimeoutM>
-    <InArgument x:TypeArguments="x:Int32" />
-  </this:HideMe_OpenBrowserToSignUp.int_TimeoutM>
+  </this:HideMe_OpenBrowserToSignUp.in_intTimeoutM>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>704.8,4420</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>704.8,4188.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>HideMe_OpenBrowserToSignUp_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,7 +105,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Desc: logout Hide me account&#xA;&#xA;PreCondition:Dashboard fouund&#xA;&#xA;Action: click on logout &#xA;&#xA;PostCondition: logout&#xA;&#xA;inArg: in_strMail&#xA;" DisplayName="HideMe_Logout " sap:VirtualizedContainerService.HintSize="715.2,4355.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Desc: logout Hide me account&#xA;&#xA;PreCondition:Dashboard fouund&#xA;&#xA;Action: click on logout &#xA;&#xA;PostCondition: Sign In Page Found&#xA;&#xA;inArg: in_strHidemeUserName&#xA;" DisplayName="HideMe_Logout " sap:VirtualizedContainerService.HintSize="715.2,4124" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,7 +113,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Start Logout" sap:VirtualizedContainerService.HintSize="652.8,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;logout hide me&quot;]" />
-    <TryCatch DisplayName="Try Catch System Exeption" sap:VirtualizedContainerService.HintSize="652.8,3746.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch System Exeption" sap:VirtualizedContainerService.HintSize="652.8,3515.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,18 +121,18 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry 3 Case Of Failure" sap:VirtualizedContainerService.HintSize="616,3475.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intNumberOfRetries]" RetryInterval="[in_tsRetryInterval]">
+        <ui:RetryScope DisplayName="Retry 3 Case Of Failure" sap:VirtualizedContainerService.HintSize="616,3244" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intNumberOfRetries]" RetryInterval="[in_tsRetryInterval]">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence sap:VirtualizedContainerService.HintSize="574.4,3299.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence sap:VirtualizedContainerService.HintSize="574.4,3068" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="PreCondition" sap:VirtualizedContainerService.HintSize="512,1072" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="PreCondition" sap:VirtualizedContainerService.HintSize="512,1072" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:Boolean" Name="boolSignUpFound" />
+                    <Variable x:TypeArguments="x:Boolean" Name="boolDashboard" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -151,53 +140,53 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Sign Up Exists" Exists="[boolSignUpFound]" sap:VirtualizedContainerService.HintSize="449.6,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists DisplayName="Dashboard" Exists="[boolDashboard]" sap:VirtualizedContainerService.HintSize="449.6,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                     <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52c09e73-3f0b-4905-adcc-e58199ba0c6c" InformativeScreenshot="6f91f58ae1eb38194dd74aaa12d79442" Selector="&lt;html app='chrome.exe' title='Sign up | hide.me' /&gt;&lt;webctrl tag='H1' /&gt;" TimeoutMS="[in_intTimeS]">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3ccd982-aa47-40d5-ba9b-a1b06afa031c" InformativeScreenshot="c706dc0dd9e6557a57f4e7bdf969c040" Selector="&lt;html app='chrome.exe' title='Dashboard | hide.me' /&gt;&lt;webctrl aaname='Dashboard' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;a' tag='A' /&gt;" TimeoutMS="[in_intTimeoutM]">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <If Condition="[boolSignUpFound]" DisplayName="If - Login Page Found ?" sap:VirtualizedContainerService.HintSize="449.6,796" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[boolDashboard]" DisplayName="If Dashboard Founded" sap:VirtualizedContainerService.HintSize="449.6,796" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Founded" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Register Found" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;sign up page found success !&quot;]" />
+                        <ui:LogMessage DisplayName="Dashboard Founded" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Dashboard founded succes and user loged&quot;]" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,382.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Not founded" sap:VirtualizedContainerService.HintSize="416,382.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Failded To Lanch" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;sign up  page not  found !&quot;]" />
-                        <Throw DisplayName="Throw- SE " Exception="[new Exception(&quot;Register Page Not found !&quot;)]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        <ui:LogMessage DisplayName="Log Dashboard Not Found" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;dashboard couldn''t be activated &quot;]" />
+                        <Throw DisplayName="Throw SE Dashboard Not Found" Exception="[new SystemException (&quot;couldn''t found dashboard&quot;)]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_3" />
                       </Sequence>
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Open Hide.me" sap:VirtualizedContainerService.HintSize="512,1085.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,854.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Hide SignUp Page" sap:VirtualizedContainerService.HintSize="449.6,956.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="22f1e52dc85402f60206ce938e0625ed" Selector="&lt;html app='chrome.exe' title='Sign up | hide.me' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Dashboard" sap:VirtualizedContainerService.HintSize="449.6,725.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="62fcea67d5c3d61c3432b8d84e9aa11a" Selector="&lt;html app='chrome.exe' title='Dashboard | hide.me' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,786.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,555.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -216,20 +205,7 @@
                             </ui:Activate.Target>
                           </ui:Activate>
                           <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window To Register Window" sap:VirtualizedContainerService.HintSize="353.6,64.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into Email" EmptyField="True" sap:VirtualizedContainerService.HintSize="353.6,196" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_strMail]">
-                            <ui:TypeInto.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1ee274eb-4cac-4d93-96f4-ceda280e8696" InformativeScreenshot="df6310b570ae0e775fc53a0a774e70d4" Selector="&lt;webctrl id='user_register_email' tag='INPUT' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:TypeInto.Target>
-                          </ui:TypeInto>
-                          <ui:LogMessage DisplayName="Log Mail Typed" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;mail typed&quot;]" />
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Clcik Register" sap:VirtualizedContainerService.HintSize="353.6,130.4" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Clcik Register" sap:VirtualizedContainerService.HintSize="353.6,147.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -241,7 +217,29 @@
                               </ui:CursorPosition>
                             </ui:Click.CursorPosition>
                             <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="65df09b5-8471-446b-84e2-c65ccafea256" InformativeScreenshot="b7a2ec2c8854aefb6286e03cd46a5596" Selector="&lt;webctrl id='user_register_save' tag='BUTTON' /&gt;">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="65df09b5-8471-446b-84e2-c65ccafea256" InformativeScreenshot="40d311a561efbddf1b8fb284b899e503" Selector="[string.Format(&quot;&lt;webctrl aaname='{0}' tag='A' /&gt;&quot;, in_strHidemeUserName)]">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Logout" sap:VirtualizedContainerService.HintSize="353.6,130.4" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a54acd7b-3e45-4520-ad77-eef4b650a062" InformativeScreenshot="88742d13c439c18f2ad8498a480c5e02" Selector="&lt;webctrl aaname='Logout' class='o-headertop__link' tag='A' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -258,7 +256,7 @@
                 </Sequence>
                 <Sequence DisplayName="Post Action" sap:VirtualizedContainerService.HintSize="512,1055.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:Boolean" Name="boolMailSend" />
+                    <Variable x:TypeArguments="x:Boolean" Name="boolSignIn" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -266,16 +264,16 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Verification email " Exists="[boolMailSend]" sap:VirtualizedContainerService.HintSize="449.6,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                  <ui:UiElementExists DisplayName="Verification email " Exists="[boolSignIn]" sap:VirtualizedContainerService.HintSize="449.6,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                     <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3ccd982-aa47-40d5-ba9b-a1b06afa031c" InformativeScreenshot="26d8715f57a92a5f66999c06f40805f2" Selector="&lt;html app='chrome.exe' title='Sign up | hide.me' /&gt;&lt;webctrl tag='H1' aaname='Verification email has been sent' /&gt;" TimeoutMS="[int_TimeoutM]">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3ccd982-aa47-40d5-ba9b-a1b06afa031c" InformativeScreenshot="c6fafbb77b105670686722748c110dc1" Selector="&lt;html app='chrome.exe' title='Log in | hide.me' /&gt;&lt;webctrl tag='H1' aaname='Sign In' /&gt;" TimeoutMS="[in_intTimeoutM]">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <If Condition="[boolMailSend]" DisplayName="If Verification email " sap:VirtualizedContainerService.HintSize="449.6,796" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[boolSignIn]" DisplayName="If Sign in Page Found" sap:VirtualizedContainerService.HintSize="449.6,796" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
                       <Sequence DisplayName="Founded" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <sap:WorkflowViewStateService.ViewState>
@@ -283,7 +281,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Verification email  Page Found" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;the mail verification page found sucess&quot;]" />
+                        <ui:LogMessage DisplayName="Sign  in Page Found" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;sign in  page found sucess&quot;]" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
@@ -293,8 +291,8 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;verification email page not found &quot;]" />
-                        <Throw Exception="[new SystemException (&quot;couldn''t found verification email  page &quot;)]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                        <ui:LogMessage DisplayName="Log Not Found" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;sign page not   found &quot;]" />
+                        <Throw DisplayName="Throw Sign In Not Found" Exception="[new SystemException (&quot;couldn''t found sign in  page &quot;)]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </If.Else>
                   </If>
@@ -333,6 +331,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="End Hide.me Register" sap:VirtualizedContainerService.HintSize="652.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;end register hide.me&quot;]" />
+    <ui:LogMessage DisplayName="End Logout Register" sap:VirtualizedContainerService.HintSize="652.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;logout success&quot;]" />
   </Sequence>
 </Activity>
