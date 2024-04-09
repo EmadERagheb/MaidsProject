@@ -426,21 +426,11 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="HideMeWeb\HideMe_OpenActivateHide.meAccount.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="HideMeWeb\HideMe_OpenActivateHide.meAccount.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
-                                            <InArgument x:TypeArguments="x:Int32" x:Key="in_intNumberOfRetries">
-                                              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="cint(Config(&quot;NumberOfRetries&quot;).ToString)" />
-                                            </InArgument>
-                                            <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_tsRetryInterval">
-                                              <VisualBasicValue x:TypeArguments="x:TimeSpan" ExpressionText="TimeSpan.Parse(Config(&quot;RetryInterval&quot;).ToString)" />
-                                            </InArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_strActivateAccout">
-                                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strActiveAccountLink" />
-                                            </InArgument>
-                                            <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeShort">
-                                              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="cint(Config(&quot;TimeoutShort&quot;).ToString)" />
-                                            </InArgument>
-                                            <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeoutMid">
-                                              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="cint(Config(&quot;TimeoutMedium&quot;).ToString)" />
-                                            </InArgument>
+                                            <InArgument x:TypeArguments="x:Int32" x:Key="in_intNumberOfRetries">[cint(Config("NumberOfRetries").ToString)]</InArgument>
+                                            <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_tsRetryInterval">[TimeSpan.Parse(Config("RetryInterval").ToString)]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_strActivateAccout">[strActiveAccountLink]</InArgument>
+                                            <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeShort">[cint(Config("TimeoutShort").ToString)]</InArgument>
+                                            <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeoutMid">[cint(Config("TimeoutMedium").ToString)]</InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -472,6 +462,9 @@
                                                 </InArgument>
                                                 <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_tsRetryInterval">
                                                   <VisualBasicValue x:TypeArguments="x:TimeSpan" ExpressionText="TimeSpan.Parse(Config(&quot;RetryInterval&quot;).ToString)" />
+                                                </InArgument>
+                                                <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeoutM">
+                                                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="cint(Config(&quot;TimeoutMedium&quot;).ToString)" />
                                                 </InArgument>
                                               </ui:InvokeWorkflowFile.Arguments>
                                               <sap:WorkflowViewStateService.ViewState>

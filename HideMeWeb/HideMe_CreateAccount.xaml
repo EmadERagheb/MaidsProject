@@ -28,7 +28,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>704.8,4468.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>704.8,2392</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>HideMe_CreateAccount_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,7 +116,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Desc: TCreate New Hide Me Account&#xA;&#xA;PreCondition:Hide Me Page Found&#xA;&#xA;Action: Type UserName Password And Then Click Create&#xA;&#xA;PostCondition: Account Created Success&#xA;&#xA;inArg: in_strUserName&#xA;           in_strPassworrd" DisplayName="HideMe_CreateAccount" sap:VirtualizedContainerService.HintSize="715.2,4404" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Desc: TCreate New Hide Me Account&#xA;&#xA;PreCondition:Hide Me Page Found&#xA;&#xA;Action: Type UserName Password And Then Click Create&#xA;&#xA;PostCondition: Account Created Success&#xA;&#xA;inArg: in_strUserName&#xA;           in_strPassworrd" DisplayName="HideMe_CreateAccount" sap:VirtualizedContainerService.HintSize="715.2,2327.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -131,7 +131,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch System Exeption" sap:VirtualizedContainerService.HintSize="652.8,3795.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch System Exeption" sap:VirtualizedContainerService.HintSize="652.8,1718.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -139,22 +139,22 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry 3 Case Of Failure" sap:VirtualizedContainerService.HintSize="616,3524" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intNumberOfRetries]" RetryInterval="[in_tsRetryInterval]">
+        <ui:RetryScope DisplayName="Retry 3 Case Of Failure" sap:VirtualizedContainerService.HintSize="616,1447.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[in_intNumberOfRetries]" RetryInterval="[in_tsRetryInterval]">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence sap:VirtualizedContainerService.HintSize="574.4,3348" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence sap:VirtualizedContainerService.HintSize="574.4,1271.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="PreCondition" sap:VirtualizedContainerService.HintSize="512,324" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="PreCondition" sap:VirtualizedContainerService.HintSize="512,64.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolActivateAccount" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -197,14 +197,14 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Open Hide.me" sap:VirtualizedContainerService.HintSize="512,1882.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Open Hide.me" sap:VirtualizedContainerService.HintSize="512,64.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Activate hide.me account" sap:VirtualizedContainerService.HintSize="449.6,1753.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="22f1e52dc85402f60206ce938e0625ed" Selector="&lt;html app='chrome.exe' title='Activate hide.me account | hide.me' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Activate hide.me account" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="22f1e52dc85402f60206ce938e0625ed" Selector="&lt;html app='chrome.exe' title='Activate hide.me account | hide.me' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -293,12 +293,17 @@
                         </Sequence>
                       </ActivityAction>
                     </ui:BrowserScope.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </ui:BrowserScope>
                 </Sequence>
                 <Sequence DisplayName="Post Action" sap:VirtualizedContainerService.HintSize="512,1055.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:Boolean" Name="boolMailSend" />
-                    <Variable x:TypeArguments="x:Boolean" Name="boolPackageActivated" />
+                    <Variable x:TypeArguments="x:Boolean" Name="boolDashboard" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -306,16 +311,16 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Free Package Activated " Exists="[boolPackageActivated]" sap:VirtualizedContainerService.HintSize="449.6,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                  <ui:UiElementExists DisplayName="Dashboard" Exists="[boolDashboard]" sap:VirtualizedContainerService.HintSize="449.6,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                     <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3ccd982-aa47-40d5-ba9b-a1b06afa031c" InformativeScreenshot="26d8715f57a92a5f66999c06f40805f2" Selector="&lt;html app='chrome.exe' title='Dashboard | hide.me' /&gt;&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' tag='DIV' aaname='Your Free package has been activated.' /&gt;" TimeoutMS="[in_intTimeoutM]">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3ccd982-aa47-40d5-ba9b-a1b06afa031c" InformativeScreenshot="c706dc0dd9e6557a57f4e7bdf969c040" Selector="&lt;html app='chrome.exe' title='Dashboard | hide.me' /&gt;&lt;webctrl aaname='Dashboard' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;a' tag='A' /&gt;" TimeoutMS="[in_intTimeoutM]">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <If Condition="[boolPackageActivated]" DisplayName="If Free package has been activated. " sap:VirtualizedContainerService.HintSize="449.6,796" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[boolDashboard]" DisplayName="If Dashboard Founded" sap:VirtualizedContainerService.HintSize="449.6,796" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
                       <Sequence DisplayName="Founded" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
@@ -323,7 +328,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Free package has been activated." sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Free package has been activated.&quot;]" />
+                        <ui:LogMessage DisplayName="Dashboard Founded" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Dashboard founded succes and user loged&quot;]" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
