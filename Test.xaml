@@ -445,7 +445,7 @@
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <av:Point x:Key="ShapeLocation">520,987.6</av:Point>
                                                         <av:Size x:Key="ShapeSize">200,24.8</av:Size>
-                                                        <av:PointCollection x:Key="ConnectorLocation">190,1007.1999999999999 190,1057.2</av:PointCollection>
+                                                        <av:PointCollection x:Key="ConnectorLocation">620,1012.4 620,1057.6</av:PointCollection>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="General\InvokCodeToGetLink.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="General\InvokCodeToGetLink.xaml">
@@ -463,6 +463,26 @@
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                     </ui:InvokeWorkflowFile>
+                                                    <FlowStep.Next>
+                                                      <FlowStep x:Name="__ReferenceID19">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <av:Point x:Key="ShapeLocation">520,1057.6</av:Point>
+                                                            <av:Size x:Key="ShapeSize">200,24.8</av:Size>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="HideMeWeb\HideMe_OpenOpenRestPassword.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="HideMeWeb\HideMe_OpenRestPassword.xaml">
+                                                          <ui:InvokeWorkflowFile.Arguments>
+                                                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                          </ui:InvokeWorkflowFile.Arguments>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </ui:InvokeWorkflowFile>
+                                                      </FlowStep>
+                                                    </FlowStep.Next>
                                                   </FlowStep>
                                                 </FlowStep.Next>
                                               </FlowStep>
@@ -553,17 +573,27 @@
       <FlowStep>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">420,1187.6</av:Point>
+            <av:Point x:Key="ShapeLocation">499.99999999999994,1157.6</av:Point>
             <av:Size x:Key="ShapeSize">200,24.8</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="HideMeWeb\HideMe_CLickRegister.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="HideMeWeb\HideMe_LogoutHideMeAccount.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="HideMeWeb\HideMe_CLickRegister.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="HideMeWeb\HideMe_LogoutHideMeAccount.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:Int32" x:Key="in_intNumberOfRetries">[cint(Config("NumberOfRetries").ToString)]</InArgument>
-            <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_tsRetryInterval">[TimeSpan.Parse(Config("RetryInterval").ToString)]</InArgument>
-            <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeouts">[cint(Config("TimeoutShort").ToString)]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_strHideMeUserName">[Config("hidemeUsername").ToString]</InArgument>
-            <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeoutM">[cint(Config("TimeoutMedium").ToString)]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_intNumberOfRetries">
+              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="cint(Config(&quot;NumberOfRetries&quot;).ToString)" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_tsRetryInterval">
+              <VisualBasicValue x:TypeArguments="x:TimeSpan" ExpressionText="TimeSpan.Parse(Config(&quot;RetryInterval&quot;).ToString)" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeouts">
+              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="cint(Config(&quot;TimeoutShort&quot;).ToString)" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_strHideMeUserName">
+              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;hidemeUsername&quot;).ToString" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeoutM">
+              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="cint(Config(&quot;TimeoutMedium&quot;).ToString)" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -627,6 +657,7 @@
       </FlowStep>
       <x:Reference>__ReferenceID17</x:Reference>
       <x:Reference>__ReferenceID18</x:Reference>
+      <x:Reference>__ReferenceID19</x:Reference>
     </Flowchart>
   </Sequence>
 </Activity>
